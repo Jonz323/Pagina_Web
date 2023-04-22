@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cinefilos</title>
+    <style>
+        /* Estilo para el fondo */
+        body {
+            background-color: #8A2BE2;
+        }
+        
+        /* Estilo para los botones */
+        button {
+            padding: 10px;
+            background-color: #fff;
+            color: #555;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        /* Estilo para los botones al ser presionados */
+        button:active {
+            background-color: #555;
+            color: #fff;
+        }
+        
+        /* Estilo para el texto normal */
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #fff;
+        }
+        
+        /* Estilo para el texto resaltado */
+        .highlight {
+            color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cinefilos</h1>
+    
+    <h2>Spider-Man: No Way Home</h2>
+    <p>Spider-Man: No Way Home es una película de superhéroes estadounidense de 2021 basada en el personaje de Marvel Comics Spider-Man, producida por Marvel Studios y Columbia Pictures, y distribuida por Sony Pictures Releasing. La película está dirigida por Jon Watts y escrita por Chris McKenna y Erik Sommers.</p>
+    <button onclick="document.querySelector('#spiderman').classList.toggle('highlight')">VER</button>
+    
+    <h2>Avengers: Endgame</h2>
+    <p>Avengers: Endgame es una película de superhéroes estadounidense de 2019 basada en el equipo de superhéroes de Marvel Comics, los Avengers. La película está dirigida por Anthony y Joe Russo y escrita por Christopher Markus y Stephen McFeely.</p>
+    <button onclick="document.querySelector('#avengers').classList.toggle('highlight')">VER</button>
+    
+    <h2>Wonder Woman 1984</h2>
+    <p>Wonder Woman 1984 es una película de superhéroes estadounidense de 2020 basada en el personaje de DC Comics Wonder Woman. La película está dirigida por Patty Jenkins y escrita por Jenkins, Geoff Johns y Dave Callaham.</p>
+    <button onclick="document.querySelector('#wonderwoman').classList.toggle('highlight')">VER</button>
+    
+    <script>
+        /* Script para cambiar el color del texto al hacer clic en los botones */
+        var buttons = document.querySelectorAll('button');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                var text = this.previousElementSibling;
+                text.classList.toggle('highlight');
+            });
+        }
+    </script>
+</body>
+</html>
